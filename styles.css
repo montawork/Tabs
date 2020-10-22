@@ -217,6 +217,7 @@ About
   cursor: pointer;
   letter-spacing: var(--spacing);
   outline: none;
+  transition: all 0.4s linear;
 }
 
 .tab-btn:hover:not(.active) {
@@ -231,7 +232,18 @@ About
 /* hide content */
 .content {
   display: none;
+  animation: fadein 0.7s ease-in;
 }
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .tab-btn.active {
   background: var(--clr-white);
 }
